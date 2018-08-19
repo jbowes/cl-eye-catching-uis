@@ -14,6 +14,10 @@
 ## terminfo
 ## Rely on the user :(
 
+# Handling Windows
+
+## At least there's only one odd one out now!
+
 # Main
 
 ## Displaying color and text formatting
@@ -28,5 +32,8 @@
 # Closing
 
 ## Next steps
+
+### Libraries that make it easy
+### Graceful degradation
 
 ## thank you!
