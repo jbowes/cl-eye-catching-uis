@@ -39,14 +39,19 @@ func fizzlefade() {
 }
 
 func fizzlechar(x, y uint8) {
+	// Write a space in column x, row y
+	// This will overwrite any existing value there
 	fmt.Printf("\033[%d;%dH ", y, x)
 }
 
 func main() {
-	fmt.Printf("\033[41m")
+	fmt.Printf("\033[0m")   // Turn off character attributes, just in case
+	fmt.Printf("\033[?25l") // Hide the cursor while we jump around
+
 	fizzlefade()
 	time.Sleep(100 * time.Millisecond)
-	fmt.Printf("\033[0m")
-	fmt.Printf("\033[2J")
-	fmt.Printf("\033[H")
+
+	fmt.Printf("\033[2J")   // Clear the entire screen
+	fmt.Printf("\033[H")    // Move to the top left
+	fmt.Printf("\033[?25h") // Restore the cursor
 }
