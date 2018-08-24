@@ -242,15 +242,16 @@ http://fabiensanglard.net/fizzlefade/index.php
 
 ## Multi-line interactive inline inputs
 
----
-
-## Fullscreen interfaces
 
 ---
 
 # Part 4
 <hr />
 ## ☞ Potpourri
+
+---
+
+## Fullscreen interfaces
 
 ---
 
