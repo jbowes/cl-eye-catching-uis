@@ -5,12 +5,6 @@ import (
 	"time"
 )
 
-var options = []string{
-	"first option",
-	"second option",
-	"last option",
-}
-
 // http://fabiensanglard.net/fizzlefade/index.php
 func fizzlefade() {
 	var rndval uint32 = 1

@@ -44,7 +44,7 @@ func eight(attrs ...int) {
 		if len(attrs) > 0 {
 			extra = fmt.Sprintf("%d;", attrs[0])
 		}
-		fmt.Printf("\033[%s%dm█", extra, i+30)
+		fmt.Printf("\033[%s%dm█", extra, i+30) // XXX clean up bold and dim here
 	}
 	fmt.Printf(resetCode)
 	fmt.Println()

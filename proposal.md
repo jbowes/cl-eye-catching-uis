@@ -17,7 +17,6 @@ will learn how to detect when these features are available in a terminal, and
 how to ensure your program works across different operating systems and
 terminals.
 
-
 # Outline
 
 Introduction / appetizer examples of some command line interfaces

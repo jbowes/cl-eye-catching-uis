@@ -43,6 +43,10 @@ https://github.com/jbowes/cl-eye-catching-uis
 <span class="fragment">\*\* For common terminals</span>
 
 ---
+
+XXX: also env vars and arg parsing
+
+---
 ## Not just for Go
 
 Share these system calls and escape sequences with your non-gopher friends.
@@ -80,6 +84,8 @@ func drawBar(percent int) {
         percent, prog, cols)
 }
 ```
+
+<!-- .element: class="fragment" -->
 
 --
 ### Building a progress bar (con't)
@@ -174,7 +180,7 @@ Thank you, American National Standards Institute! <!-- .element: class="fragment
 
 ### Linear-feedback shift register screen clearing
 
-![wolfenstein fizzelfade](/images/wolfenstein.gif)
+![wolfenstein fizzelfade](/images/wolfenstein.gif) <!-- .element: style="border: 0;" width="45%" -->
 
 http://fabiensanglard.net/fizzlefade/index.php
 

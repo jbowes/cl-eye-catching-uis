@@ -19,7 +19,7 @@ func main() {
 	fmt.Printf(resetCode)
 	fmt.Printf("\033[7mreverse")
 	fmt.Printf(resetCode)
-	fmt.Printf("\033[8minvisible")
+	fmt.Printf("\033[8minvisible") // don't use this for hiding passwords
 	fmt.Printf(resetCode)
 	fmt.Printf("\033[9mcrossed-out")
 	fmt.Printf(resetCode)
