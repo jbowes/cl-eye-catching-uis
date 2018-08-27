@@ -2,65 +2,32 @@ package main
 
 import "fmt"
 
-const esc = "\033["
-
-type attribute int
-
-const reset attribute = 0
-
-// The possible colors of text inside the application.
-//
-// These constants are called through the use of the Styler function.
-const (
-	FGBlack attribute = iota + 30
-	FGRed
-	FGGreen
-	FGYellow
-	FGBlue
-	FGMagenta
-	FGCyan
-	FGWhite
-)
-
-// The possible background colors of text inside the application.
-//
-// These constants are called through the use of the Styler function.
-const (
-	BGBlack attribute = iota + 40
-	BGRed
-	BGGreen
-	BGYellow
-	BGBlue
-	BGMagenta
-	BGCyan
-	BGWhite
-)
-
-var resetCode = fmt.Sprintf("%s%dm ", esc, reset)
-
-func eight(attrs ...int) {
-	for i := 0; i < 8; i++ {
-		var extra string
-		if len(attrs) > 0 {
-			extra = fmt.Sprintf("%d;", attrs[0])
-		}
-		fmt.Printf("\033[%s%dm█", extra, i+30) // XXX clean up bold and dim here
-	}
-	fmt.Printf(resetCode)
-	fmt.Println()
+func printWithCode(code int, val string) {
+	fmt.Printf("\033[%dm%s", code, val)
 }
+
+func reset() { printWithCode(0, "\n") }
+
+func eight() {
+	for i := 0; i < 8; i++ {
+		printWithCode(i+30, "█")
+	}
+	reset()
+}
+
+func print256BGColor(code int) { fmt.Printf("\033[48;5;%dm ", code) }
 
 func main() {
 	fmt.Printf("original 8: ")
 	eight()
 
 	fmt.Printf("bold 8:     ")
-	fmt.Printf("\033[1m")
-	eight(1)
+	printWithCode(1, "")
+	eight()
 
 	fmt.Printf("dim 8:      ")
-	fmt.Printf("\033[2m")
-	eight(2)
+	printWithCode(2, "")
+	eight()
 
 	fmt.Println("Bold and dim only work for foreground colors")
 	fmt.Println()
@@ -69,43 +36,38 @@ func main() {
 
 	fmt.Print("original 8:       ")
 	for i := 0; i < 8; i++ {
-		fmt.Printf("\033[48;5;%dm ", i)
+		print256BGColor(i)
 	}
-	fmt.Printf(resetCode)
-	fmt.Println()
+	reset()
 
 	fmt.Print("high intensity 8: ")
 	for i := 8; i < 16; i++ {
-		fmt.Printf("\033[48;5;%dm ", i)
+		print256BGColor(i)
 	}
-	fmt.Printf(resetCode)
-	fmt.Println()
+	reset()
 	fmt.Println()
 
 	fmt.Println("6 x 6 x 6 pallette:")
 	for i := 1; i < 217; i++ {
-		fmt.Printf("\033[48;5;%dm ", i+15)
+		print256BGColor(i + 15)
 		if i%36 == 0 {
-			fmt.Printf(resetCode)
-			fmt.Println()
+			reset()
 		}
 	}
-	fmt.Printf(resetCode)
-	fmt.Println()
+	reset()
 
 	fmt.Print("greyscale: ")
 	for i := 232; i < 256; i++ {
-		fmt.Printf("\033[48;5;%dm ", i)
+		print256BGColor(i)
 	}
-	fmt.Printf(resetCode)
-	fmt.Println()
+	reset()
 	fmt.Println()
 
 	fmt.Println("24 bit true color:")
 	for i := 0; i < 8; i++ {
 		for j := 0; j < 64; j++ {
-			fmt.Printf("\033[48;2;%d;0;%dm ", i*4+128, j*2)
+			fmt.Printf("\033[48;2;%d;%d;%dm ", i*4+128, 0, j*2)
 		}
-		fmt.Println(resetCode)
+		reset()
 	}
 }
