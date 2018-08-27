@@ -1,6 +1,8 @@
 # CL Eye-Catching User Interfaces
+<!-- .element: style="text-align: left" -->
 
 https://bit.ly/cli-ui
+<!-- .element: style="float: left" -->
 
 <div align="right">GopherCon</div>
 <div align="right">August 29, 2018</div>
@@ -346,7 +348,8 @@ http://fabiensanglard.net/fizzlefade/index.php
 <!-- .element: style="float: left" -->
 
 --
-# Reading List <!-- .element: style="text-align: left" -->
+# Reading List
+<!-- .element: style="text-align: left" -->
 
 - [Windows console reference](https://docs.microsoft.com/en-us/windows/console/console-reference)
 - [ANSI escape codes](https://en.wikipedia.org/wiki/ANSI_escape_code)
@@ -356,7 +359,8 @@ http://fabiensanglard.net/fizzlefade/index.php
 
 ---
 
-# Thank you! <!-- .element: style="text-align: left" -->
+# Thank you!
+<!-- .element: style="text-align: left" -->
 
 - [@jrbowes](https://twitter.com/jrbowes)
 - [this presentation](https://bit.ly/cli-ui)
