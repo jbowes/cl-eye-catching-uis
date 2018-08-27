@@ -132,17 +132,69 @@ representation in a font. It will still look ok if the font supports it though!
 
 ## Missing Characters in a Typeface
 
+```go
+missing := "The power symbol is new in Unicode 9: ⏻"
+fmt.Println(missing)
+```
+
+
 --
 
 ## Miscounting Multibyte Characters
+
+```go
+miscounted := "😀"
+fmt.Println(miscounted, "has len", len(miscounted))
+fmt.Println(miscounted, "has runes",
+	utf8.RuneCount([]byte(miscounted)))
+```
+
+```shell
+has len 4
+has runes 1
+```
 
 --
 
 ## Wide Characters
 
+```go
+wide := "十"
+fmt.Println(wide)
+fmt.Println("01")
+
+fmt.Println("runes:", utf8.RuneCount([]byte(wide)))
+fmt.Println("width:", runewidth.StringWidth(wide))
+```
+
+```shell
+十
+01
+runes: 1
+width: 2
+```
+
 --
 
-## Single-Width Characters That Render as Wide
+### Single-Width Characters That Render as Wide
+```go
+wrongWidth := "☛"
+fmt.Println(wrongWidth)
+fmt.Println("01")
+
+fmt.Println("runes:", utf8.RuneCount([]byte(wrongWidth)))
+fmt.Println("width:", runewidth.StringWidth(wrongWidth))
+
+fmt.Printf("%sOver top\n", wrongWidth)
+```
+
+```shell
+☛
+01
+runes: 1
+width: 1
+☛Over top
+```
 
 ---
 
