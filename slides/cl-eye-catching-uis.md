@@ -14,7 +14,7 @@ https://bit.ly/cli-ui
 <image src="/images/james.png" style="float: left; border:0; background: none" width="20%">
 
 - James Bowes
-- [@jrbowes](https://twitter.com/jrbowes)
+- [<i class="fab fa-twitter"></i> @jrbowes](https://twitter.com/jrbowes)
 - Technical Lead @ [Manifold](https://www.manifold.co)
 - Worked on many CLI tools no-one uses any more
   (*up2date, yum*)
@@ -362,7 +362,7 @@ http://fabiensanglard.net/fizzlefade/index.php
 # Thank you!
 <!-- .element: style="text-align: left" -->
 
-- [@jrbowes](https://twitter.com/jrbowes)
-- [this presentation](https://bit.ly/cli-ui)
+- [<i class="fab fa-twitter"></i> @jrbowes](https://twitter.com/jrbowes)
+- [<i class="fab fa-github"></i> this presentation](https://bit.ly/cli-ui)
 
 <!-- .element: style="float: left" -->
