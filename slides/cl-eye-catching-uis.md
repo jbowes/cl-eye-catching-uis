@@ -224,17 +224,22 @@ Thank you, American National Standards Institute! <!-- .element: class="fragment
 
 # Text Decoration and Color
 
+XXX: fill this in
+
 --
 
 ## Decorations
+XXX: fill this in
 
 --
 
 ## Character Size
+XXX: fill this in
 
 --
 
 ## Color
+XXX: fill this in
 
 ---
 
@@ -248,6 +253,12 @@ Thank you, American National Standards Institute! <!-- .element: class="fragment
 
 http://fabiensanglard.net/fizzlefade/index.php
 
+--
+
+## Relative Movement
+
+XXX: fill this in
+
 ---
 
 # Interlude
@@ -258,22 +269,27 @@ http://fabiensanglard.net/fizzlefade/index.php
 
 ## Just how bad things can go
 
+XXX: fill me in
 ---
 
 # How can we tell what is supported?
 
+XXX: fill me in
 --
 
 ## Env vars
 
+XXX: fill me in
 --
 
 ## terminfo
 
+XXX: fill me in
 --
 
 ## Rely on the user :(
 
+XXX: fill me in
 ---
 
 # Handling Windows
@@ -302,14 +318,21 @@ http://fabiensanglard.net/fizzlefade/index.php
 <!-- .slide: data-menu-title="Out-of-band signalling" -->
 ## The Client / Server Split
 
+Out-of-band signalling through system calls.
+
+Thank you, IEEE Computer Society! 🤷 <!-- .element: class="fragment" -->
+
 ---
 
 ## Detecting terminal size for columnar output and text wrapping
+
+XXX: fill this in
 
 ---
 
 ## Multi-line interactive inline inputs
 
+XXX: fill this in
 
 ---
 <!-- .slide: data-menu-title="Part 4: Potpourri" -->
@@ -322,13 +345,19 @@ http://fabiensanglard.net/fizzlefade/index.php
 
 ## Fullscreen interfaces
 
+XXX: fill this in
+
 ---
 
 ## Displaying graphics in terminals that support it
 
+XXX: fill this in
+
 ---
 
 ## Capturing mouse input
+
+XXX: fill this in
 
 ---
 <!-- Closing section begins -->
