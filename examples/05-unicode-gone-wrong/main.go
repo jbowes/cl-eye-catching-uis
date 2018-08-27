@@ -27,4 +27,15 @@ func main() {
 
 	fmt.Println("runes:", utf8.RuneCount([]byte(wide)))
 	fmt.Println("width:", runewidth.StringWidth(wide))
+
+	fmt.Println()
+	fmt.Println("Single width rendering wide:")
+	wrongWidth := "☛"
+	fmt.Println(wrongWidth)
+	fmt.Println("01")
+
+	fmt.Println("runes:", utf8.RuneCount([]byte(wrongWidth)))
+	fmt.Println("width:", runewidth.StringWidth(wrongWidth))
+
+	fmt.Printf("%sOver top\n", wrongWidth)
 }

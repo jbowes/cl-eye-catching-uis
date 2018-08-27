@@ -3,13 +3,17 @@ EXAMPLES=$(filter-out Makefile $(PLATFORMS), $(wildcard * ))
 
 all: $(PLATFORMS:=-all)
 
-$(PLATFORMS:=-all): %-all: $(EXAMPLES:%=\%/%)
+darwin-all linux-all: %-all: $(EXAMPLES:%=\%/%)
+windows-all: %-all: $(EXAMPLES:%=windows/%.exe)
 
-$(EXAMPLES:%=darwin/%): darwin/%: $(wildcard %/*.go)
+.SECONDEXPANSION:
+$(EXAMPLES:%=darwin/%): darwin/%: $$(wildcard %/*.go)
 	GOOS=darwin go build -o $@ ./$*
 
-$(EXAMPLES:%=linux/%): linux/%: $(wildcard %/*.go)
+.SECONDEXPANSION:
+$(EXAMPLES:%=linux/%): linux/%: $$(wildcard %/*.go)
 	GOOS=linux go build -o $@ ./$*
 
-$(EXAMPLES:%=windows/%): windows/%: $(wildcard %/*.go)
-	GOOS=windows go build -o $@.exe ./$*
+.SECONDEXPANSION:
+$(EXAMPLES:%=windows/%.exe): windows/%.exe: $$(wildcard %/*.go)
+	GOOS=windows go build -o $@ ./$*
