@@ -1,6 +1,6 @@
 # CL Eye-Catching User Interfaces
 
-https://github.com/jbowes/cl-eye-catching-uis
+https://bit.ly/cli-ui
 
 <div align="right">GopherCon</div>
 <div align="right">August 29, 2018</div>
@@ -22,9 +22,11 @@ https://github.com/jbowes/cl-eye-catching-uis
 <!-- .element: style="width: 70%; float: right" -->
 
 --
+<!-- .slide: data-menu-title="Spooky on her thinkpad" -->
 <!-- .slide: data-background="/images/sandwich-cat.jpg" -->
 
 --
+<!-- .slide: data-menu-title="My terminals" -->
 <!-- .slide: data-background="/images/terminal-desktop.png" -->
 
 ---
@@ -38,13 +40,16 @@ https://github.com/jbowes/cl-eye-catching-uis
 ...safely, for any operating system<span class="fragment">*</span>
 
 --
+<!-- .slide: data-menu-title="Caveats" -->
 \* Recent versions of Mac OS, Linux, and Windows<span class="fragment">**</span>
 
 <span class="fragment">\*\* For common terminals</span>
 
----
+--
+## Notably Absent
 
-XXX: also env vars and arg parsing
+- Command line argument parsing
+- Environment variables
 
 ---
 ## Not just for Go
@@ -54,6 +59,7 @@ Share these system calls and escape sequences with your non-gopher friends.
 <span class="fragment"><i>Use a package for real code.</i> 😬</span>
 
 ---
+<!-- .slide: data-menu-title="Part 1: Characters" -->
 
 # Part 1
 <hr />
@@ -65,6 +71,7 @@ Share these system calls and escape sequences with your non-gopher friends.
 ### Your new secret weapon
 
 --
+<!-- .slide: data-menu-title="A runaway carriage" -->
 <!-- .slide: data-background="/images/runaway-carriage.jpg" -->
 
 Note:
@@ -110,6 +117,7 @@ fmt.Printf("\rdemo progress: %3[1]d%% |%-[3]*[2]s|",
 
 ## Unicode Spinners
 
+XXX: fill this in
 Progress bars with clock emoji, braille
 checks and Xs.
 
@@ -117,6 +125,7 @@ checks and Xs.
 
 ## Spice up Your User Interactions
 
+XXX: fill this in
 Spice it up with the pepper!
 
 ---
@@ -136,7 +145,6 @@ representation in a font. It will still look ok if the font supports it though!
 missing := "The power symbol is new in Unicode 9: ⏻"
 fmt.Println(missing)
 ```
-
 
 --
 
@@ -197,12 +205,14 @@ width: 1
 ```
 
 ---
+<!-- .slide: data-menu-title="Part 2: Escape Codes" -->
 
 # Part 2
 <hr />
 ## ☞ Escape Codes
 
 ---
+<!-- .slide: data-menu-title="In-band signalling" -->
 
 In-band signalling that starts with `\033[`.
 
@@ -280,12 +290,14 @@ http://fabiensanglard.net/fizzlefade/index.php
 
 
 ---
+<!-- .slide: data-menu-title="Part 3: System Calls" -->
 
 # Part 3
 <hr />
 ## ☞ System Calls
 
 ---
+<!-- .slide: data-menu-title="Out-of-band signalling" -->
 ## The Client / Server Split
 
 ---
@@ -294,14 +306,11 @@ http://fabiensanglard.net/fizzlefade/index.php
 
 ---
 
-## Cursor movement and input masking
-
----
-
 ## Multi-line interactive inline inputs
 
 
 ---
+<!-- .slide: data-menu-title="Part 4: Potpourri" -->
 
 # Part 4
 <hr />
@@ -332,9 +341,9 @@ http://fabiensanglard.net/fizzlefade/index.php
 - [chzyer/readline](https://github.com/chzyer/readline)
 - [manifoldco/promptui](https://github.com/manifoldco/promptui)
 - [gdamore/tcell](https://github.com/gdamore/tcell)
+- [mattn/go-runewidth](https://github.com/mattn/go-runewidth)
 
 <!-- .element: style="float: left" -->
-
 
 --
 # Reading List <!-- .element: style="text-align: left" -->
@@ -350,6 +359,6 @@ http://fabiensanglard.net/fizzlefade/index.php
 # Thank you! <!-- .element: style="text-align: left" -->
 
 - [@jrbowes](https://twitter.com/jrbowes)
-- [this presentation](github.com/jbowes/cl-eye-catching-uis)
+- [this presentation](https://bit.ly/cli-ui)
 
 <!-- .element: style="float: left" -->
