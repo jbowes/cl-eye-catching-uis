@@ -32,7 +32,7 @@ https://bit.ly/cli-ui
 <!-- .slide: data-background="/images/terminal-desktop.png" -->
 
 ---
-### In 45 minutes you will learn how to
+### You will learn how to
 - make progress bars and spinners
 - decorate text
 - draw anywhere on the terminal
@@ -132,8 +132,11 @@ checks and Xs.
 
 ## Spice up Your User Interactions
 
-XXX: fill this in
-Spice it up with the pepper!
+```shell
+✅ Success!
+⚠️ Your password needs more entropy
+🌶 ???
+```
 
 ---
 
