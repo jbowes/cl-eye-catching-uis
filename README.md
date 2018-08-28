@@ -6,7 +6,7 @@
                 |__/                                     |___/
 ```
 
-This repository contains the [Reveal.js]( ) markdown slide source and examples
+This repository contains the [Reveal.js](https://revealjs.com/) markdown slide source and examples
 for my GopherCon 2018 tutorial session.
 
 - [slides](https://pedantic-bell-26ad02.netlify.com/)
