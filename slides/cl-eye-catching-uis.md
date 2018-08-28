@@ -299,7 +299,12 @@ XXX: fill me in
 
 ## terminfo
 
-XXX: fill me in
+A database of terminal names (from `TERM`) and capabilities that started in
+`ncurses`. Includes escape codes.
+
+For better portability, use a terminfo database for in-band signalling.
+<!-- .element: class="fragment" -->
+
 --
 
 ## Rely on the user
