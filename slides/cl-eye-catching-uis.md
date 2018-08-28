@@ -124,9 +124,15 @@ fmt.Printf("\rdemo progress: %3[1]d%% |%-[3]*[2]s|",
 
 ## Unicode Spinners
 
-XXX: fill this in
-Progress bars with clock emoji, braille
-checks and Xs.
+Carriage return ❤️ unicode
+
+```go
+var (
+	braille = []rune{'⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'}
+	clock   = []rune{'🕒', '🕓', '🕔', '🕕', '🕖', '🕗', '🕘', '🕙', '🕚', '🕛', '🕐', '🕑'}
+)
+```
+<!-- .element: class="fragment" -->
 
 --
 
@@ -235,21 +241,21 @@ Thank you, American National Standards Institute! <!-- .element: class="fragment
 --
 
 ## Decorations
-XXX: fill this in
+Mostly supported
 
 --
 
 ## Character Size
-XXX: fill this in
+Not well supported, but really neat!
 
 --
 
 ## Color
-XXX: fill this in
+So many options!
 
 ---
 
-# Multiline With Cursor Movement
+# Multiline Output With Cursor Movement
 
 --
 
@@ -261,9 +267,10 @@ http://fabiensanglard.net/fizzlefade/index.php
 
 --
 
-## Relative Movement
+## So much more!
 
-XXX: fill this in
+- Relative cursor movement
+- Partial screen clearing
 
 ---
 
@@ -280,12 +287,14 @@ XXX: fill me in
 
 # How can we tell what is supported?
 
-XXX: fill me in
 --
 
-## Env vars
+## Environment Variables
 
-XXX: fill me in
+- `TERM=xterm-256color`
+- `COLORTERM=truecolor`
+- Terminal specific values
+
 --
 
 ## terminfo
@@ -293,12 +302,15 @@ XXX: fill me in
 XXX: fill me in
 --
 
-## Rely on the user :(
+## Rely on the user
 
-XXX: fill me in
+Provide flags and configuration for color and interactivity
+
 ---
 
 # Handling Windows
+
+XXX: fill this in
 
 --
 
@@ -328,15 +340,15 @@ Thank you, IEEE Computer Society! 🤷 <!-- .element: class="fragment" -->
 
 ---
 
-## Detecting terminal size for columnar output and text wrapping
+## Detecting terminal size
 
-XXX: fill this in
+Great for columnar output and wrapping.
 
 ---
 
 ## Multi-line interactive inline inputs
 
-XXX: fill this in
+Raw mode
 
 ---
 <!-- .slide: data-menu-title="Part 4: Potpourri" -->
@@ -349,7 +361,10 @@ XXX: fill this in
 
 ## Fullscreen interfaces
 
-XXX: fill this in
+Combine:
+- Raw mode
+- Direct tty access
+- Alternate buffer
 
 ---
 

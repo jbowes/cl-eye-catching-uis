@@ -17,3 +17,8 @@ $(EXAMPLES:%=linux/%): linux/%: $$(wildcard %/*.go)
 .SECONDEXPANSION:
 $(EXAMPLES:%=windows/%.exe): windows/%.exe: $$(wildcard %/*.go)
 	GOOS=windows go build -o $@ ./$*
+
+clean:
+	rm -rf darwin
+	rm -rf linux
+	rm -rf windows
