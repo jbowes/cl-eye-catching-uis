@@ -53,6 +53,11 @@ https://bit.ly/cli-ui
 - Command line argument parsing
 - Environment variables
 
+Note:
+
+command line argument / flag parsing is very important, but also divisive. In
+layout and API. Pick your favorite! You can't go wrong.
+
 ---
 ## Not just for Go
 
@@ -224,8 +229,6 @@ Thank you, American National Standards Institute! <!-- .element: class="fragment
 
 # Text Decoration and Color
 
-XXX: fill this in
-
 --
 
 ## Decorations
@@ -243,7 +246,7 @@ XXX: fill this in
 
 ---
 
-## Multiline With Cursor Movement
+# Multiline With Cursor Movement
 
 --
 
@@ -316,8 +319,6 @@ XXX: fill me in
 
 ---
 <!-- .slide: data-menu-title="Out-of-band signalling" -->
-## The Client / Server Split
-
 Out-of-band signalling through system calls.
 
 Thank you, IEEE Computer Society! 🤷 <!-- .element: class="fragment" -->
