@@ -37,7 +37,7 @@ https://bit.ly/cli-ui
 - decorate text
 - draw anywhere on the terminal
 - collect input
-- do fancy images
+- do fancy things with mice and images
 
 ...safely, for any operating system<span class="fragment">*</span>
 
@@ -64,6 +64,22 @@ layout and API. Pick your favorite! You can't go wrong.
 Share these system calls and escape sequences with your non-gopher friends.
 
 <span class="fragment"><i>Use a package for real code.</i> 😬</span>
+
+--
+
+## Go is awesome for CLIs
+
+- Great support for Windows, Mac OS, Linux
+- Easy cross compilation with `GOOS` and `GOARCH`
+- Self-contained binary (as long as you don't need Cgo)
+
+---
+
+## Hierarchy of User Interfaces
+
+- Command Line Interface (CLI)
+- Text-based User Interface (TUI) <span class="fragment">☜</span>
+- Graphical User Interface (GUI)
 
 ---
 <!-- .slide: data-menu-title="Part 1: Characters" -->
@@ -255,8 +271,8 @@ So many options!
 
 ---
 
-# Multiline Output With Cursor Movement
-
+# Multiline Output
+## With Cursor Movement
 --
 
 ### Linear-feedback shift register screen clearing
@@ -280,9 +296,22 @@ http://fabiensanglard.net/fizzlefade/index.php
 
 ---
 
-## Just how bad things can go
+## How bad can it be?
 
-XXX: fill me in
+```
+0kc5N/d|NkuKboHmhDdc4_.f~Y`zTevNbsHipCjn3^`mZlVkkRdkPkkM`
+lLnlJkmIinIhoIlpImqIorImsJotJiuKkvKawLnwLdxMixMayMfyMjyM
+nyMoyMczMMgzMMMhzNNizNjzNhzOizOkzOizPjzPhzQfzQczQmyRjyRg
+yR`yShxSmwSmvSivS`vShuS`uSmtSftSctSlsTjsTesUlrVhrWdrXarY
+jqZbq[gp\ko]in^gm^cl^ej^dh]f[mcXbaT-f~O{IbxBlt2ZiqPjnEnk
+1YjiLmg0^jfOdl@nl/QomCjo.VmqJet-_`wUzLa}D.b`,]obWieSchOi
+jMlKenJooIgqIdrJgsJctKotLguMluO`vPdvQkvQnvRawSgwShwTmwTa
+xTexTixTlxT`yTgySfySiySmyS`zSczRRRbzRRnyRRjyReyRayRlxRkx
+QfxQaxQlwQnwPiwPgwOawOovNivNgvMevM`vMkuLfuLntLjtLosLgsLi
+```
+
+That's a teapot in ReGIS
+
 ---
 
 # How can we tell what is supported?
@@ -313,17 +342,17 @@ Provide flags and configuration for color and interactivity
 
 ---
 
-# Handling Windows
+## Handling Windows
 
-XXX: fill this in
-
---
-
-## Escape codes in Windows 10
+- Windows 10 can enable VT processing
+- For other versions, wrap the output and parse escape codes
 
 --
 
 ## Windows Subsystem for Linux
+
+- ANSI codes and POSIX syscalls under Windows 👍
+- The console related APIS don't work across environments 👎
 
 ---
 
@@ -341,7 +370,9 @@ XXX: fill this in
 <!-- .slide: data-menu-title="Out-of-band signalling" -->
 Out-of-band signalling through system calls.
 
-Thank you, IEEE Computer Society! 🤷 <!-- .element: class="fragment" -->
+Thank you, IEEE Computer Society 🤷 <!-- .element: class="fragment" -->
+
+And Microsoft 🤷 <!-- .element: class="fragment" -->
 
 ---
 
@@ -373,15 +404,22 @@ Combine:
 
 ---
 
-## Displaying graphics in terminals that support it
+## Displaying graphics
 
-XXX: fill this in
+- `SIXEL`: raster graphics from DEC
+- `ReGIS`: vector graphics from DEC
+- Custom formats for assorted modern terminals
 
 ---
 
 ## Capturing mouse input
 
-XXX: fill this in
+- Broad support 👍
+- Not supported in Windows VT Processing. You have to fall back to the input
+  buffer API. 👎
+
+Note:
+Show the final example for 11-potpourri here.
 
 ---
 <!-- Closing section begins -->
