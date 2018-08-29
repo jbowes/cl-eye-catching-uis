@@ -407,6 +407,7 @@ XXX: fill this in
 - [Windows console reference](https://docs.microsoft.com/en-us/windows/console/console-reference)
 - [ANSI escape codes](https://en.wikipedia.org/wiki/ANSI_escape_code)
 - [termios(3)](http://man7.org/linux/man-pages/man3/termios.3.html)
+- [XTerm Control Sequences](http://invisible-island.net/xterm/ctlseqs/ctlseqs.html)
 
 <!-- .element: style="float: left" -->
 
