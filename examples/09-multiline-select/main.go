@@ -33,25 +33,21 @@ func loop() {
 	for {
 		drawOptions(idx)
 
-		buf := []byte{0, 0, 0}
-		n, _ := os.Stdin.Read(buf)
-		if n == 0 { // This is very poor input parsing.
-			continue
-		}
+		buf := [3]byte{}
+		os.Stdin.Read(buf[:])
 
+		// This is very poor input parsing
 		switch {
-		case string(buf) == "\033[A": // escape sequence for up key
+		case string(buf[:]) == "\033[A": // escape sequence for up key
 			if idx != 0 {
 				idx--
 			}
-		case string(buf) == "\033[B": // escape sequence for down key
+		case string(buf[:]) == "\033[B": // escape sequence for down key
 			if idx != 2 {
 				idx++
 			}
 		case buf[0] == 'q':
 			return
-		default:
-			fmt.Println(buf)
 		}
 	}
 }
