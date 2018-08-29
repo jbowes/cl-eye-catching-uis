@@ -69,7 +69,7 @@ func drawForITerm() func(x, y int) {
 		os.Exit(1)
 	}
 
-	f, err := os.Open("11-potpourri/gophercon.jpg")
+	f, err := os.Open("12-potpourri/gophercon.jpg")
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "%s\n", err)
 		os.Exit(1)
