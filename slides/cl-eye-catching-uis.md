@@ -351,13 +351,8 @@ Provide flags and configuration for color and interactivity
 
 ## Windows Subsystem for Linux
 
-- ANSI codes and POSIX syscalls under Windows 👍
+- ANSI escape codes and POSIX syscalls under Windows 👍
 - The console related APIS don't work across environments 👎
-
----
-
-## At least there's only one odd one out now!
-
 
 ---
 <!-- .slide: data-menu-title="Part 3: System Calls" -->

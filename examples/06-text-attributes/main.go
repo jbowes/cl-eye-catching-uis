@@ -2,27 +2,32 @@ package main
 
 import "fmt"
 
-const esc = "\033["
-
-var resetCode = fmt.Sprintf("%s%dm ", esc, 0)
+func reset() { fmt.Print(" \033[0m") }
 
 func main() {
 	fmt.Printf("\033[1mbold")
-	fmt.Printf(resetCode)
+	reset()
+
 	fmt.Printf("\033[2mdim")
-	fmt.Printf(resetCode)
+	reset()
+
 	fmt.Printf("\033[3mitalics")
-	fmt.Printf(resetCode)
+	reset()
+
 	fmt.Printf("\033[4munderline")
-	fmt.Printf(resetCode)
+	reset()
+
 	fmt.Printf("\033[5mblink")
-	fmt.Printf(resetCode)
+	reset()
+
 	fmt.Printf("\033[7mreverse")
-	fmt.Printf(resetCode)
+	reset()
+
 	fmt.Printf("\033[8minvisible") // don't use this for hiding passwords
-	fmt.Printf(resetCode)
+	reset()
+
 	fmt.Printf("\033[9mcrossed-out")
-	fmt.Printf(resetCode)
+	reset()
 
 	fmt.Println()
 	fmt.Println("blink, invisible, and crossed-out are usually not supported")
